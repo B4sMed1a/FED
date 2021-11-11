@@ -40,7 +40,7 @@ https://intothewoodsfestival.nl/amersfoort/#inschrijving-bedankt
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Into the woods festival Amersfoort 2021
-<img src="../images/ittw.png" width="7017px" alt="Into the woods festival pagina">
+<img src="images/ittw.png" width="7017px" alt="Into the woods festival pagina">
  
 </details>
 
