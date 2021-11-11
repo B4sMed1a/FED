@@ -1,0 +1,406 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: itw-scribbly, sans-serif;
+  font-size: 108%;
+}
+
+:root {
+  --grijzetekst: rgb(58, 58, 58);
+  --donkeretekst: rgb(29, 29, 29);
+  --wittetekst: rgb(255, 255, 255);
+  --oranjetekst: rgb(255, 166, 0);
+  --selectioncolor: rgb(90, 87, 68);
+  --nightColor: 4, 0, 27,;
+}
+
+@font-face {
+  font-family: itw-scribbly;
+  src: url("../fonts/itw-scribbly-webfont.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+::selection {
+  color: var(--oranjetekst);
+  background-color: var(--selectioncolor);
+}
+
+img::selection {
+  user-select: none;
+  background: transparent;
+}
+
+body {
+  font-family: itw-scribbly, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(../images/achtergrond.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  position: relative;
+}
+
+body.hide::before,
+body.hide::after {
+  opacity: 0;
+}
+
+body::before,
+body::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  transition-property: opacity;
+  z-index: 0;
+}
+
+body::before {
+  top: 0;
+  left: 0;
+  height: 150vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(var(--nightColor) 0.5) 45%,
+    rgba(var(--nightColor) 0.4) 85%,
+    rgba(var(--nightColor) 0.3) 90%,
+    rgba(var(--nightColor) 0) 98%
+  );
+  transition: 4s;
+}
+
+body::after {
+  height: 80%;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(var(--nightColor) 0.65) 0%,
+    rgba(var(--nightColor) 0) 50%,
+    rgba(var(--nightColor) 0) 100%
+  );
+  transition: 2s;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+main > section {
+  position: relative;
+  padding-bottom: 600px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    start                                   */
+/* -------------------------------------------------------------------------- */
+
+#start {
+  padding-bottom: 900px;
+  z-index: 2;
+}
+
+#start > figure {
+  /* border: 2px dashed red; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#start > figure picture {
+  position: absolute;
+  top: 150px;
+  /* border: 2px dashed blue; */
+  animation: miniOrbit 5.6s ease-in-out 0s infinite alternate none running;
+  z-index: 7;
+}
+
+#start > figure img {
+  width: 170px;
+  animation: removeLamp 5.6s ease-in-out 5.6s 1 forwards running;
+}
+
+#start > div {
+  max-width: 1800px;
+  position: relative;
+  margin: 0 auto;
+  animation: myOrbit 5.6s ease-in-out 0s infinite alternate none running;
+}
+
+#start > div figure img {
+  position: absolute;
+  z-index: -1;
+}
+
+#start > div figure:first-of-type img {
+  top: -20%;
+  right: 70%;
+  transform: scaleX(-1);
+}
+
+#start > div figure:last-of-type img {
+  top: 300px;
+  left: 70%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    intro                                   */
+/* -------------------------------------------------------------------------- */
+
+#intro {
+  width: 100%;
+}
+
+#intro div {
+  /* border: 2px dashed blue; */
+  position: relative;
+  height: 500px;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#intro div figure {
+  transition: 4s;
+  --rand: 65%;
+  position: absolute;
+  animation: myOrbitLarge var(--playingSpeed) ease-in-out 0s infinite alternate
+    none running;
+}
+
+#intro div figure:first-of-type {
+  right: var(--rand);
+  --playingSpeed: 4s;
+}
+#intro div figure:nth-of-type(2) {
+  --playingSpeed: 5s;
+}
+#intro div figure:last-of-type {
+  left: var(--rand);
+  --playingSpeed: 6s;
+}
+
+#intro:hover div figure {
+  --rand: 50%;
+  transition: 2s;
+}
+
+#intro > figure {
+  width: 100%;
+  /* border: 2px dashed blue; */
+  display: flex;
+  justify-content: center;
+}
+
+#intro > figure img {
+  /* display: block;
+  position: relative; */
+  width: 200px;
+  animation: myOrbit 4s ease-in-out 0s infinite alternate none running;
+}
+
+#intro > h1 {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 200%;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+#intro h1 span:last-child {
+  color: #292929;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    News                                    */
+/* -------------------------------------------------------------------------- */
+
+#news article {
+  max-width: 500px;
+  padding: 1em;
+  font-size: 95%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 200;
+  line-height: 1.6;
+  color: var(--grijzetekst);
+}
+
+#news article h1 {
+  font-size: 1.7em;
+  line-height: 1.2;
+  font-weight: lighter;
+  color: var(--donkeretekst);
+}
+
+#news article h1 + p,
+#news article p + p {
+  margin-top: 1.5em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    danku                                   */
+/* -------------------------------------------------------------------------- */
+
+#danku p {
+  /* border: 2px solid red; */
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--grijzetekst);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     FAQ                                    */
+/* -------------------------------------------------------------------------- */
+
+#faq {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 600px;
+  z-index: 1;
+
+}
+
+#faq > h1 {
+  text-transform: uppercase;
+  color: orange;
+  font-size: 200%;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+#faq > div:first-of-type {
+  height: 100%;
+  max-width: 620px;
+  width: 100%;
+  padding: 1.5em;
+}
+
+details {
+  padding: 0.2em 0;
+  font-weight: bold;
+  color: var(--wittetekst);
+}
+
+summary {
+  padding: 0.5em;
+  position: relative;
+  cursor: pointer;
+}
+
+details[open] summary {
+  border-bottom: 2px solid orange;
+  margin-bottom: 1em;
+}
+
+details > summary {
+  list-style: none;
+}
+
+summary::after {
+  content: "🢒";
+  position: absolute;
+  right: 0;
+  transition: 0.1s;
+  transform: rotate(90deg);
+}
+details[open] summary:after {
+  transform: rotate(270deg);
+}
+
+#faq div a {
+  color: var(--wittetekst);
+  opacity: 0.6;
+  font-size: small;
+  text-align: left;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#faq div a:nth-of-type(3):hover, a:nth-of-type(4):hover {
+  transform: scaleX(-1);
+}
+
+
+#faq > div figure img {
+  position: absolute;
+  z-index: -1;
+  max-width: 1800px;
+  margin: 0 auto;
+  animation: myOrbit 5.6s ease-in-out 0s infinite alternate none running;
+}
+
+#faq > div figure:first-of-type img {
+  top: 10%;
+  right: 70%;
+  transform: scale(-1, 1);
+}
+
+#faq > div figure:last-of-type img {
+  top: -20%;
+  left: 70%;
+  animation: myOrbit 4s ease-in-out 0s infinite alternate none running;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  animaties                                 */
+/* -------------------------------------------------------------------------- */
+
+@keyframes myOrbit {
+  0% {
+    transform: rotate(0deg) translateX(8px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn) translateX(8px) rotate(-1turn);
+  }
+}
+
+@keyframes myOrbitLarge {
+  0% {
+    transform: rotate(0deg) translateX(15px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn) translateX(15px) rotate(-1turn);
+  }
+}
+
+@keyframes miniOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes removeLamp {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(0px, 990.9px);
+    opacity: 0;
+  }
+}
