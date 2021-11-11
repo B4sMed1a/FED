@@ -57,7 +57,7 @@ Into the woods festival Amersfoort 2021
 <img src="../images/breakdownschets.png" width="7017" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="../images/animated.png" width="375px" alt="breakdown van een dynamisch deel">
+<img src="https://github.com/B4sMed1a/FED21DEF/blob/main/images/animated.png" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
