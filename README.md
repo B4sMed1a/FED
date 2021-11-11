@@ -40,7 +40,7 @@ https://intothewoodsfestival.nl/amersfoort/#inschrijving-bedankt
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Into the woods festival Amersfoort 2021
-<img src="images/ittw.png" width="7017px" alt="Into the woods festival pagina">
+<img src="https://github.com/B4sMed1a/FED21DEF/blob/main/images/ittw.png" width="7017px" alt="Into the woods festival pagina">
  
 </details>
 
@@ -54,7 +54,7 @@ Into the woods festival Amersfoort 2021
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="../images/breakdownschets.png" width="7017" alt="breakdown van de hele pagina">
+<img src="https://github.com/B4sMed1a/FED21DEF/blob/main/images/breakdownschetsXS.png" width="7017" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
 <img src="https://github.com/B4sMed1a/FED21DEF/blob/main/images/animated.png" width="375px" alt="breakdown van een dynamisch deel">
